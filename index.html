@@ -9,7 +9,7 @@
 <body>
     <a-scene>
         <a-assets>
-            <a-asset-item id="moon-model" src="https://edwinros.github.io/AR2/earth.glb"></a-asset-item>
+            <a-asset-item id="earth-model" src="https://edwinros.github.io/AR2/earth.glb"></a-asset-item>
         </a-assets>
 
         <a-sky color="#000000"></a-sky> <!-- Fondo negro -->
@@ -18,7 +18,9 @@
             <a-cursor></a-cursor>
         </a-entity>
 
-        <a-entity gltf-model="#moon-model" scale="0.2 0.2 0.2" rotation="50 180 50"></a-entity> <!-- Rotación del modelo -->
+        <a-entity gltf-model="#earth-model" scale="0.2 0.2 0.2" rotation="50 180 50">
+            <a-animation attribute="rotation" to="0 360 0" dur="10000" easing="linear" repeat="indefinite"></a-animation>
+        </a-entity>
     </a-scene>
 </body>
 </html>
