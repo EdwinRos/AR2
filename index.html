@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo 3D de la Luna</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <a-asset-item id="moon-model" src="https://edwinros.github.io/AR2/earh.fbx"></a-asset-item>
+        </a-assets>
+
+        <a-sky color="#000000"></a-sky> <!-- Fondo negro -->
+
+        <a-entity camera position="0 1 15" look-controls> <!-- Posición y controles de la cámara -->
+            <a-cursor></a-cursor>
+        </a-entity>
+
+        <a-entity gltf-model="#moon-model" scale="0.2 0.2 0.2" rotation="0 180 0"></a-entity> <!-- Rotación del modelo -->
+    </a-scene>
+</body>
+</html>
